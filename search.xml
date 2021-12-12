@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Typora 完全使用手册</title>
+    <url>/archives/65090/</url>
+    <content><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>​    本手册是基于少数派的 <a class="link"   href="https://sspai.com/post/54912"  title="Typora 完全使用详解">文章 <i class="fas fa-external-link-alt"></i></a> 而成，几乎全文是少数派的内容。这是因为最开始我并不打算上传到我的博客，而仅仅作为我入门 Typora 的一篇本地指导性文档。但是因为在完成之后发现 Typora 是如此美妙，也有搭建个人博客的打算，综合考虑下就写下了这段声明性的文字。</p>
+<hr>
+
+<h2 id="什么是-Typora？"><a href="#什么是-Typora？" class="headerlink" title="什么是 Typora？"></a>什么是 Typora？</h2><p>Typora 是支持实时预览的 Markdown 文本编辑器。</p>
+<h2 id="一个-Markdown-文本编辑器"><a href="#一个-Markdown-文本编辑器" class="headerlink" title="一个 Markdown 文本编辑器"></a>一个 Markdown 文本编辑器</h2><p>它首先是一个 Markdown 文本编辑器，支持且仅支持 Markdown 语法的文本编辑。</p>
+<p>官网<a class="link"   href="https://typora.io/" >^1<i class="fas fa-external-link-alt"></i></a>描述它是「A truly <strong>minimal</strong> markdown editor. 」</p>
+<h3 id="关于-Markdown"><a href="#关于-Markdown" class="headerlink" title="关于 Markdown"></a>关于 Markdown</h3><p>Markdown 是用于编写结构化文档的一种纯文本格式，可以实现双手不离键盘的情况下对文本内容做出一定的格式化排版。 <a class="link"   href="https://sspai.com/post/36610"  title="快速入门 Markdown">入门 Markdown 。<i class="fas fa-external-link-alt"></i></a></p>
+<p>目前 Markdown 采用的语法规则是较为认可的 GFM 标准<a class="link"   href="https://github.github.com/gfm/" >^2<i class="fas fa-external-link-alt"></i></a> ( GitHub 制定 )。可在 ⌈ 文件 - 偏好设置 - Markdown 语法偏好 - 严格模式 ⌋ 设置标准模式为 ⌈ 更严格地遵循 GFM 标准 ⌋</p>
+<h3 id="写得舒服"><a href="#写得舒服" class="headerlink" title="写得舒服"></a>写得舒服</h3><ul>
+<li><h4 id="智能标点-3"><a href="#智能标点-3" class="headerlink" title="智能标点^3"></a>智能标点<a class="link"   href="http://support.typora.io/SmartyPants/" >^3<i class="fas fa-external-link-alt"></i></a></h4></li>
+<li><h4 id="图片插入"><a href="#图片插入" class="headerlink" title="图片插入"></a>图片插入</h4></li>
+<li><h4 id="打字机模式和专注模式"><a href="#打字机模式和专注模式" class="headerlink" title="打字机模式和专注模式"></a>打字机模式和专注模式</h4><ul>
+<li><p><strong>⌈打字机模式⌋</strong> 编辑的那行永远处于屏幕正中</p>
+</li>
+<li><p><strong>⌈专注模式⌋</strong> 保留正在编辑的那行的颜色，其他行数的字体呈灰色</p>
+</li>
+</ul>
+</li>
+<li><h4 id="实时预览"><a href="#实时预览" class="headerlink" title="实时预览"></a>实时预览</h4></li>
+</ul>
+<p>该功能指的是，当离开正在编辑的带有格式的文本段落后，Typora 会自动隐藏 Markdown 留下的标记，实现所见即所得。官方称这为 Hydrid View。</p>
+<ul>
+<li><h4 id="大纲-文件侧边栏"><a href="#大纲-文件侧边栏" class="headerlink" title="大纲 / 文件侧边栏"></a>大纲 / 文件侧边栏</h4></li>
+</ul>
+<p>Typora 会根据你的 Markdown 标记的各级标题呈现大纲。</p>
+<ul>
+<li><h4 id="空格和换行"><a href="#空格和换行" class="headerlink" title="空格和换行"></a>空格和换行</h4><ul>
+<li><p>空格</p>
+<p>输入连续空格后会在编辑视图保留，但打印或导出会省略成一个。</p>
+<p>可以通过 \ 转义符或者使用 &amp;nbsp 保持连续空格</p>
+</li>
+<li><p>软换行</p>
+<p>在 Markdown 语法中，换行 ( line break ) 同换段不同。同时换行分为软换行和硬换行。在 Typora 中可以通过 <strong>Shift+Enter</strong> 完成软换行。但软换行仅编辑界面可见，导出时会被省略。</p>
+</li>
+<li><p>硬换行</p>
+<p>可以通过 <strong>空格 + 空格 + Shift + Enter</strong> 完成一次硬换行，这也是被大多 Markdown 编辑器原生支持的。硬换行在被导出时会被保留，且不会存在换段的段后距。</p>
+</li>
+<li><p>换段</p>
+<p>通过 <strong>Enter</strong> 进行换段。Typora 自动完成两次 <strong>Shift + Enter</strong> 的软换行从而换段。这意味着在 Markdown 语法下换段是在段和段之间加入空行实现的。</p>
+</li>
+<li><p>Windows 风格 ( CR+LF ) 和 Unix 风格 ( CR ) 的换行符</p>
+<p>CR 表示回车 <strong>\r</strong> ，即回到一行的开头，而 LF 表示换行 <strong>\n</strong>，即另起一行</p>
+<p>所以 Windows 风格的换行符本质是 <strong>⌈回车 + 换行⌋</strong> ，而 Unix 风格的换行符是 <strong>⌈换行⌋</strong>。</p>
+</li>
+</ul>
+</li>
+<li><h4 id="emoji-表情"><a href="#emoji-表情" class="headerlink" title="emoji 表情"></a>emoji 表情</h4><ul>
+<li>输入法联想</li>
+<li>复制</li>
+<li>在 Typora 中，可以用 <strong>:emoji:</strong> 的形式打出emoji，会给出图形提示。</li>
+</ul>
+</li>
+</ul>
+<h2 id="一个学术文档编辑器"><a href="#一个学术文档编辑器" class="headerlink" title="一个学术文档编辑器"></a>一个学术文档编辑器</h2><h3 id="LaTeX"><a href="#LaTeX" class="headerlink" title="LaTeX"></a>LaTeX</h3><blockquote>
+<p>LaTeX 是一种基于 TeX 的排版系统，由于它易于快速生成复杂表格和数学公式，非常适用于生成高印刷质量的科技和数学类文档。</p>
+</blockquote>
+<p>​    Typora 原生支持 LaTeX 的语法，有两种方式输入 LaTeX 风格的公式</p>
+<ol>
+<li>行内公式 ( inline )： 用 <strong>$….$</strong> 括起公式，公式会出现在行内。如 $1+1=2$</li>
+<li>块间公式 ( display )： 用 <strong>$$….$$</strong> 括起公式 ( 注意 <strong>$$</strong> 后需要换行)，公式默认显示在行中间。如$$1+1=2$$</li>
+</ol>
+<p>​    <a class="link"   href="https://blog.csdn.net/happyday_d/article/details/83715440" >学习 LaTeX 语法。<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h3><p>​    代码插入部分也分行内和块间两种</p>
+<ol>
+<li><p>行内代码用 <strong>`…`</strong> 或 <strong>``….``</strong> 括起代码，代码会以主题中设置的样式出现在行内，但不会实现代码高亮。如 <code>print(&quot;Hello World!&quot;)</code></p>
+</li>
+<li><p>代码块，输入<strong>```</strong> 后输入语言名，换行开始写代码，Typora 会自动实现代码高亮。Typora 原生支持大多编程语言代码块的语法高亮。也可先写代码在选择语言。如</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">foo</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> firstName = <span class="string">&quot;田所&quot;</span></span><br><span class="line">    <span class="keyword">var</span> lastName = <span class="string">&quot;浩二&quot;</span></span><br><span class="line">    <span class="keyword">var</span> age = <span class="number">24</span></span><br><span class="line">    println(<span class="string">&quot;<span class="variable">$firstName</span> <span class="variable">$lastName</span>, 今年<span class="variable">$age</span> 岁，事学生&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>​    在 Typora 中，只需在行内 <code>右键-插入-表格</code>，输入行列就会自动生成一张空表格。</p>
+<h3 id="链接引用与脚注"><a href="#链接引用与脚注" class="headerlink" title="链接引用与脚注"></a>链接引用与脚注</h3><p>​    链接引用类似论文末尾的 <strong>⌈参考文献⌋</strong> 的写法，可以通过 <code>[]:</code> 语法加上链接引用。如 [本文参考]:<a class="link"   href="https://sspai.com/post/54912" >https://sspai.com/post/54912<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h3><p>​    快速打开。通过<code>文件 - 快速打开...</code> 或 <code>Ctrl + P</code> 快速打开最近的文档。</p>
+<p>​    保存。Typora 支持自动保存，但也有 <strong>⌈保存⌋</strong> <strong>⌈另存为⌋</strong> <strong>⌈保存全部打开的文件…⌋</strong> 之类功能。</p>
+<p>​    导入。Typora 支持导入多种格式 <code>.docx, .latex, .tex, .ltx, .rst, .rest, .org, .wiki, .dokuwiki, .textile, .opml, .epub</code></p>
+<p>导出。Typora 原生支持导出为 PDF， HTML 等格式。可安装 Pandoc 插件以支持导出更多。</p>
+<h2 id="一个伪装成文本编辑器的浏览器"><a href="#一个伪装成文本编辑器的浏览器" class="headerlink" title="一个伪装成文本编辑器的浏览器"></a>一个伪装成文本编辑器的浏览器</h2><h3 id="伪装成文本编辑器的浏览器？"><a href="#伪装成文本编辑器的浏览器？" class="headerlink" title="伪装成文本编辑器的浏览器？"></a>伪装成文本编辑器的浏览器？</h3><p>​    是。譬如可以按 <code>F12</code> 打开浏览器的开发者选项。</p>
+<h3 id="HTML-标签"><a href="#HTML-标签" class="headerlink" title="HTML 标签"></a>HTML 标签</h3><p>​    Typora 支持大量常用的 HTML 标签。会 HTML 的话可以写出精美的文档。</p>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><p>​    为了页面美观可以加上 CSS。</p>
+<p>​    Typora 的主题本质上也是 CSS 文件。</p>
+<h3 id="YAML-font-matter"><a href="#YAML-font-matter" class="headerlink" title="YAML font-matter"></a>YAML font-matter</h3><p>​    Typora 支持在文档头部加上基于 YAML 的 font-matter 信息。这一特性适用于把 Markdown 文档分类归档上传到用 Hexo 框架搭建的博客中。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2>]]></content>
+  </entry>
+  <entry>
+    <title>网站优化（一）：请求 Google 收录个人网站</title>
+    <url>/archives/45585/</url>
+    <content><![CDATA[<h1 id="Google-Search-Console"><a href="#Google-Search-Console" class="headerlink" title="Google Search Console"></a>Google Search Console</h1><h2 id="这是什么？"><a href="#这是什么？" class="headerlink" title="这是什么？"></a>这是什么？</h2><p>来自维基百科的解释是：</p>
+<blockquote>
+<p>Google Search Console is a web service by Google which allows webmasters to check indexing status and optimize visibility of their websites.</p>
+<p>Google Search Console 是 Google 推出的一款面向网站管理员查询网站收录状态和调整网站曝光率的工具。</p>
+</blockquote>
+<p>它可以将自己的网站提交给 Google 以显示在搜索结果中。</p>
+<p>那么该如何设置？</p>
+<h2 id="开始设置"><a href="#开始设置" class="headerlink" title="开始设置"></a>开始设置</h2><h3 id="注册-Google-账号"><a href="#注册-Google-账号" class="headerlink" title="注册 Google 账号"></a>注册 Google 账号</h3><p>答案：略</p>
+<p>解析：和其他网站相似的注册流程，这里就略过了。要注意的是，使用中国手机号可能无法通过注册。</p>
+<h3 id="进入-GSC"><a href="#进入-GSC" class="headerlink" title="进入 GSC"></a>进入 GSC</h3><p>访问 <a class="link"   href="https://search.google.com/search-console/about" >Google Search Console<i class="fas fa-external-link-alt"></i></a> ，点击 Start Now ，随后需要添加一个 Property ( 中文是：资源 ) 。</p>
+<p>Google 提供了两种类型进行验证：一个是 Domain，一个是 URL prefix 。</p>
+<p>使用 Domain 验证的话可以不必再次验证其子域名，并且支持使用 http 或 https 协议。使用 Domain 添加 Property 是通过 DNS 进行验证。本人采用的是此方法。</p>
+<p>使用 URL prefix 则是进行网址前缀的验证。验证的范围仅仅只有包含这个前缀的地址。比如有个域名是 example.com ，它有子域名 blog.example.com ，news.example.com, 那么现在对 blog.example.com 进行 URL Prefix 方式的验证，那么想要配置 news.example.com 的话就需要添加一个新的 property 。如果是对 example.com 进行了 Domain 方式的验证，对其所有子域名都不需要再添加新的 property 即可进行配置。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/googleSearchConsolePropertyType.13guntm883ds.png" alt="googleSearchConsolePropertyType"></p>
+<div class="admonition note"></div>
+
+<p>   注意：请依照文本框中的格式输入。domain 类型只需要直接填入域名，而 URL prefix 类型的需要加上传输协议和三级域名。</p>
+<p>选择对应的 property 类型，输入自己的域名之后点 continue 继续。</p>
+<p>等它稍微验证一下会出现以下界面：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/googleSearchConsoleVerifybyDNSRecord.777cncildpg0.png" alt="googleSearchConsoleVerifybyDNSRecord"></p>
+<p>可以通过选择 Instructions for 的下拉列表选择你的提供商。</p>
+<p>在下拉列表中的提供商可以快速验证域名的所有权。因为我的域名提供商是 <a class="link"   href="https://www.namesilo.com/" >NameSilo<i class="fas fa-external-link-alt"></i></a> 。所以我选择了 <code>NameSilo</code> ：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/googleSearchConsoleVerifybyDNSRecord_NameSilo.7ihbgp1al3s0.png" alt="googleSearchConsoleVerifybyDNSRecord_NameSilo"></p>
+<p>然后直接点击 Verify 转跳绑定授权页，然后会自动验证。</p>
+<p>这个时候我就报错了。</p>
+<p>奇了怪了，怎么不行？</p>
+<p>反复折腾了五六个来回之后我想起来了，对我域名进行 DNS 解析的是在 <a class="link"   href="https://www.cloudflare.com/" >CloudFlare<i class="fas fa-external-link-alt"></i></a> 上进行的，那么就应该是在 CloudFlare 上验证才是正确的。（ 如果之前未利用 CloudFlare 进行 CDN 加速的可以尝试添加进去或者寻找其他方法 ）</p>
+<p>先复制 Google Search Console 给你的 TXT record 文本（ 见上方 <code>Verify domain ownership via DNS record</code> 第 2 点）</p>
+<p>然后登陆之后在主页点击出现的有我们域名的标签，</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/cloudFlareMainPage.69r1de7gkno0.png" alt="cloudFlareMainPage" style="zoom:50%;" /> 
+
+<p>点击左侧的 DNS 选项，找到：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/cloudFlareDNSAddRecord.jzzgh1ii8w0.png" alt="cloudFlareDNSAddRecord"></p>
+<p>点击 <code>添加记录</code> ，将显示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/cloudFlareDNSAddRecordDefault.5dfooxijmwo0.png" alt="cloudFlareDNSAddRecordDefault"></p>
+<p>我们要将类型改为 TXT ，然后如图填写：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/cloudFlareDNSAddRecordTXT.5orbrmyffdw0.png" alt="cloudFlareDNSAddRecordTXT"></p>
+<p>其中，在名称一栏输入字符 <code>@</code> ，在内容框中把我们复制好的 TXT record 文本粘贴进来，点保存。</p>
+<p>你会看到在下方已经出现了类型为 TXT 的记录。</p>
+<p>现在可以返回到刚刚的 Google Search Console 页面，点击验证，等待 Google 处理。若失败请等待至少 1 小时后再试，因为添加的记录可能可能不会有那么快生效。</p>
+<p>成功界面如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/googleSearchConsoleVerifybyDNSRecordSuccess.11x4cxiiwa00.png" alt="googleSearchConsoleVerifybyDNSRecordSuccess"></p>
+<p>点击 <code>GO TO PROPERTY</code> ，进入 GSC 的界面，找到左侧的 <code>URL inspection</code> 并点击，在搜索框中输入自己的域名，回车。</p>
+<p>GSC 将会有如下结果：</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/googleSearchConsoleURLInspectionNotOnGoogle.3ny0njbov8s0.png" alt="googleSearchConsoleURLInspectionNotOnGoogle" style="zoom:50%;" />
+
+<p>这时点击 <strong>URL is not on Google</strong> 模块右下角的 <strong>REQUEST INDEXING</strong> 去请求提交给 Google 。这相当于跟 Google 说：我这里有个网站，你来看看。等到 Google 检测完了之后就请耐心等待，不要去重复提交。</p>
+<p>接到 Google 发给你的邮件说已经收录之后，再次打开这个页面将会显示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/googleSearchConsoleURLInspectionIstOnGoogle.3ysfelv4h3g0.png" alt="googleSearchConsoleURLInspectionIstOnGoogle"> </p>
+<p>现在你的域名可以在 Google 上被搜到了。</p>
+<h3 id="Sitemaps"><a href="#Sitemaps" class="headerlink" title="Sitemaps?"></a>Sitemaps?</h3><p>这个玩意好像中文名是叫「站点地图」，维基上的解释是 “A site map (or sitemap) is a list of pages of a web site within a domain.” 它描述了网站的架构。</p>
+<blockquote>
+<p>Google 在很大程度上是通过链接找到网页，如果您的网站是全新的，并且只有很少的外部反向链接，那么网站地图非常适合帮助 Google 在您的网站上查找页面。</p>
+<p>源自 <a class="link"   href="https://www.eula.club/%E6%90%AD%E5%BB%BAHexo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%B9%B6%E4%BD%BF%E7%94%A8Git%E9%83%A8%E7%BD%B2%E5%88%B0VPS.html#8-SEO%E5%88%86%E6%9E%90%E4%BC%98%E5%8C%96" >此处<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+<p>我们可以在 Hexo 根目录下打开命令行 / 终端，执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<p>然后在站点配置文件 <code>_config.yml</code> 内修改 <code>URL</code> 部分内容：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">http://yoursite.com</span></span><br></pre></td></tr></table></figure>
+
+<p>将其中的 <code>yoursite.com</code> 替换成自己的域名：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">http://zero-pointenergy.net</span></span><br></pre></td></tr></table></figure>
+
+<p>然后在文件末尾添加：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br><span class="line">  <span class="attr">rel:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>然后生成一个叫蜘蛛文件的东西，它的用途是指定 Google 爬虫哪些路径可以访问，哪些路径不可以访问。</p>
+<p>我们在 <code>.\source</code> 文件夹下建一个名为 <code>robots</code> 的文本文档，输入并保存以下内容：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">User-agent:</span> <span class="string">*</span></span><br><span class="line"><span class="attr">Allow:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">Allow:</span> <span class="string">/archives/</span></span><br><span class="line"><span class="attr">Allow:</span> <span class="string">/categories/</span></span><br><span class="line"><span class="attr">Allow:</span> <span class="string">/tags/</span> </span><br><span class="line"><span class="attr">Allow:</span> <span class="string">/resources/</span> </span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/vendors/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/js/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/css/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/fonts/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/vendors/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/fancybox/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Sitemap:</span> <span class="string">https://zero-pointenergy.net/sitemap.xml</span></span><br></pre></td></tr></table></figure>
+
+<p>随后通过：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>即可在 <code>.\public</code> 文件夹下生成 sitemap.xml 文件和 robots.txt 文件。</p>
+<p>再通过 <code>hexo d</code> 进行部署。</p>
+<p>回到你的 Google Search Console 页面，点击左侧菜单中的 <code>Sitemaps</code> ，在 Add a new sitemap 处填入 http://你的域名/ ，然后点右方的 SUBMIT 按钮，稍待片刻即会提示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/googleSearchConsoleSitemapSubmittedSuccessfully.47ofozr1g880.png" alt="googleSearchConsoleSitemapSubmittedSuccessfully"></p>
+<p>那么便成功向 Google 提交了你网站的站点地图。</p>
+<h3 id="优化网址路径"><a href="#优化网址路径" class="headerlink" title="优化网址路径"></a>优化网址路径</h3><p>现在为止，我们博客的连接总是会跟着 <code>/year/month/day/</code> 这样的路径，又长又对搜索引擎不是很友好，我们得优化一下。</p>
+<p>安装 <code>hexo-abbrlink</code> 插件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+
+<p>在站点配置文件内修改 <code>permalink</code> 部分：</p>
+<p>要从：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br></pre></td></tr></table></figure>
+
+<p>改成：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># permalink: :year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">archives/:abbrlink/</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line">  <span class="attr">alg:</span> <span class="string">crc32</span></span><br><span class="line">  <span class="attr">rep:</span> <span class="string">hex</span></span><br></pre></td></tr></table></figure>
+
+<p>其中的 <code>alg:</code> 是算法，默认是 crc16 ；<code>rep</code> 是进制，默认是 dec 。</p>
+<p>然后通过：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+
+<p>进行部署即可。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>搭建记录</title>
+    <url>/archives/60479/</url>
+    <content><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>本文是我用于记录同时带有分享性质的文章，主要记录的是我这个博客从无到有的搭建（含美化）。同时因为统合多篇文章内容，可能会有相当部分的内容被省略，但我会尽可能提供参考过的原文章链接，也可直接前往原作者文章了解详情。</p>
+<p>计划是：先从本地 push 到 GitHub，然后再从服务器 pull GitHub 的库。因为我并不确定我服务器什么时候被 GFW 拦截，所以以防万一用 GitHub 当备份。</p>
+<p>请注意，我的系统是 Windows 11，版本号是 22504.1010.0 。如有部分差别请自行寻找你所使用的系统版本的相同功能程序 / 操作。</p>
+<p>那么，スタート！</p>
+<hr>
+
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><h3 id="跟-Google-签订战略合作伙伴协议"><a href="#跟-Google-签订战略合作伙伴协议" class="headerlink" title="跟 Google 签订战略合作伙伴协议"></a>跟 Google 签订战略合作伙伴协议</h3><p>需要准备的东西有：</p>
+<ul>
+<li>基本启动资金</li>
+<li>合适的服务器提供 / 运营商</li>
+<li>学会任意的攀爬 / 墙体施工 / 魔法技术</li>
+</ul>
+<p>准备好了之后通过 <code>ssh</code> 链接到自己服务器上，然后 <strong>⌈数据删除⌋</strong> 。</p>
+<p>之后就可以看到 Google 的界面了</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/GooglePage.4ot7pyep28a0.png" alt="GooglePage" style="zoom:50%;" />
+
+<p>此时说明和 Google 签订的协议生效了。</p>
+<p>通过 Google 我发现了 <a class="link"   href="https://zhuanlan.zhihu.com/p/26625249" >GitHub+Hexo 搭建个人网站详细教程<i class="fas fa-external-link-alt"></i></a> 。参照这篇文章我的工程得以继续。</p>
+<h2 id="Blog-建设进程"><a href="#Blog-建设进程" class="headerlink" title="Blog 建设进程"></a>Blog 建设进程</h2><h3 id="获得个人域名"><a href="#获得个人域名" class="headerlink" title="获得个人域名"></a>获得个人域名</h3><p>国内的域名提供商可以选<a class="link"   href="https://wanwang.aliyun.com/domain" >万网<i class="fas fa-external-link-alt"></i></a>，<a class="link"   href="https://cloud.tencent.com/" >腾讯云<i class="fas fa-external-link-alt"></i></a>等，同时需要备案。</p>
+<p>国外的域名提供商有 <a class="link"   href="https://www.anrdoezrs.net/" >Dynadot<i class="fas fa-external-link-alt"></i></a>, <a class="link"   href="https://www.tkqlhce.com/" >NameCheap<i class="fas fa-external-link-alt"></i></a>, <a class="link"   href="https://www.namesilo.com/" >NameSilo<i class="fas fa-external-link-alt"></i></a> 等，免备案。</p>
+<h3 id="GitHub-创建个人仓库"><a href="#GitHub-创建个人仓库" class="headerlink" title="GitHub 创建个人仓库"></a>GitHub 创建个人仓库</h3><p>这没什么好讲的，注册一个 GitHub 账号（若无），登录后找到 <code>New repository</code> 创建新仓库。要注意的是库名应当是：<code>自己的用户名.github.com</code>。我的是：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/GitHubRepositories.77z0pkma2u80.png" alt="GitHubRepositories"></p>
+<h3 id="Git-安装"><a href="#Git-安装" class="headerlink" title="Git 安装"></a><a name="Git_Install" style="text-decoration: none;">Git 安装</a></h3><p>要安装，你需要先访问 <a class="link"   href="https://git-scm.com/download/win" >https://git-scm.com/download/win<i class="fas fa-external-link-alt"></i></a> 进行下载，这是 Git 的官方下载页面。</p>
+<p>安装成功后通过<code>git --version</code> 验证安装。出现如图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/gitVersion.m650f7jotd.png" alt="gitVersion"></p>
+<p>效果，能输出当前版本号后，安装成功。</p>
+<p>然后打开 Git Bash ，输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;你的 GitHub 用户名&quot;</span></span><br><span class="line">git condig --global user.email <span class="string">&quot;你的 GitHub 邮箱&quot;</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;你的 GitHub 邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个 <code>ssh-keygen</code>是用来生成 ssh 密钥文件的，直接回车三连即可。生成的密钥文件在 <code>C:\Users\你的用户名\.ssh</code>路径下，找到 <code>id_rsa.pub</code>密钥，取其内容，欸~，然后打开 <a class="link"   href="https://github.com/settings/keys" >https://github.com/settings/keys<i class="fas fa-external-link-alt"></i></a> 页面，new 一个 SSH key，将刚刚复制的内容粘贴进去，起个名字，然后 Add SSH key 就行。</p>
+<p>回去 Git Bash，输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>回车后应当显示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/gitSSHTest.7ewbwg1f1v80.png" alt="gitSSHTest"></p>
+<p>如果你也是这样的话，那么恭喜，可行，进入下一步。</p>
+<h3 id="Node-js-安装"><a href="#Node-js-安装" class="headerlink" title="Node.js 安装"></a>Node.js 安装</h3><p>我早已安装了 Node.js ，所以我并不想做演示。可以进入 <a class="link"   href="https://nodejs.org/en/download/" >https://nodejs.org/en/download/<i class="fas fa-external-link-alt"></i></a> 下载并安装。</p>
+<p>或者 Windows 11 的用户貌似可以使用 winget 来进行安装。打开终端输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">winget install nodejs</span><br></pre></td></tr></table></figure>
+
+<p>等待就好。</p>
+<p>安装成功后，在终端检验<code>nodejs</code>和<code>npm</code>是否成功，分别输入 <code>node -v</code>和<code>npm -v</code> ，若成功则出现当前的版本：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/node&npm-v.14emhtsd9c1s.png" alt="node&amp;npm-v"></p>
+<p>至此，安装 Hexo 的环境搭建完成。</p>
+<h3 id="Hexo-安装"><a href="#Hexo-安装" class="headerlink" title="Hexo 安装"></a>Hexo 安装</h3><h4 id="Hexo-是什么？"><a href="#Hexo-是什么？" class="headerlink" title="Hexo 是什么？"></a>Hexo 是什么？</h4><blockquote>
+<p>Hexo is a fast, simple and powerful blog framework. You write posts in <a class="link"   href="http://daringfireball.net/projects/markdown/" >Markdown<i class="fas fa-external-link-alt"></i></a> (or other markup languages) and Hexo generates static files with a beautiful theme in seconds.</p>
+<p>Hexo 是一个快速、简单又强大的 blog 框架。您用 Markdown 或其他标记语言所写的文章，Hexo都能在几秒内生成美丽的静态文件。</p>
+</blockquote>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>新建文件夹用于存放你的博客网站，譬如我在 D 盘新建文件夹 Blog。</p>
+<p>先别急着进入更改创建的 Blog 文件夹。在当前目录右键，选择在此打开命令行。我的则是 “ 在此打开终端 ”</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/openInWindowsTerminal.38k98jx5hzk0.png" alt="openInWindowsTerminal"></p>
+<p>使用 npm 命令安装 hexo，在命令提示符或终端中输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>完成之后输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init [你的 Blog 文件夹名](我的就叫 Blog )</span><br></pre></td></tr></table></figure>
+
+<p>此时你的 Blog 文件夹应该包含这些文件 / 文件夹：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoDirs.1fvaclzt4gww.png" alt="hexoDirs"></p>
+<p>现在你的 hexo 框架已经安装好了。</p>
+<p>( 终端 ) 进入到你所创建的 Blog 文件夹，输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>在执行了 <code>hexo s</code> 的命令后，会出现一行 <strong><code>INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></strong> 提示。 这个时候访问 <a class="link"   href="http://127.0.0.1:4000/" >http://127.0.0.1:4000<i class="fas fa-external-link-alt"></i></a> 或 <a class="link"   href="http://localhost:4000/" >http://localhost:4000<i class="fas fa-external-link-alt"></i></a> 即可进入 hexo 初始的网页。</p>
+<p>hexo 博客基本框架已经搭建完成，接下来该做的就只是美化和部署了。</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="部署到-GitHub"><a href="#部署到-GitHub" class="headerlink" title="部署到 GitHub"></a>部署到 GitHub</h3><p>部署到 GitHub 会需要用到 Git 工具，这也是为什么我们先前已经实现安装了 Git 。</p>
+<p>要实现网站的推送，首先得去 Blog 根目录里面的 _config.yml ( 被称为站点配置文件 ) 文件进行编辑。</p>
+<p>用任意记事本类工具打开即可。</p>
+<p>翻到最后的 deploy : </p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>将它修改并保存</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> [<span class="string">你仓库的</span> <span class="string">URL</span> <span class="string">|</span> <span class="string">git@github.com:</span>[<span class="string">你的</span> <span class="string">GitHub</span> <span class="string">用户名</span>]<span class="string">/</span>[<span class="string">GitHub</span> <span class="string">用户名</span>]<span class="string">.github.io</span>]<span class="string">.git</span></span><br><span class="line">  <span class="comment"># repo 的格式可以为 https://github.com/example/example.github.io.git</span></span><br><span class="line">  <span class="comment"># 或者 git@github.com:example/example.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
+
+<p>安装 Git 部署插件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>三句话，让 hexo 为我部署到 GitHub。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean	<span class="comment"># 清除缓存，网页正常可不使用</span></span><br><span class="line">hexo g	<span class="comment"># 渲染成静态页面</span></span><br><span class="line">hexo d	<span class="comment"># 上传渲染的静态页面</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="部署到-VPS"><a href="#部署到-VPS" class="headerlink" title="部署到 VPS"></a>部署到 VPS</h3><h4 id="开始前程序"><a href="#开始前程序" class="headerlink" title="开始前程序"></a>开始前程序</h4><ul>
+<li>用 ssh 登录到你的服务器，并使用你的包管理安装 <code>Nginx</code> 和 <code>Git</code> </li>
+<li>要配置 VPS 上 的 <code>Git</code> ，请参考 <a href="#Git_Install">此处 </a> 。</li>
+</ul>
+<h4 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h4><h5 id="Clone-仓库"><a href="#Clone-仓库" class="headerlink" title="Clone 仓库"></a>Clone 仓库</h5><p>要想能够访问到 VPS 服务器上的 Blog 页面，没有对应的 HTML 文件怎么行。<code>cd</code> 到你页面文件夹中，譬如我的路径是 <code>/var/www/wwwroot/blog.zero-pointenergy.net</code> （ 请先创建相关文件夹 ）使用：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www/wwwroot/blog.zero-pointenergy.net</span><br></pre></td></tr></table></figure>
+
+<p>随后用 <code>git clone</code> 将 GitHub 仓库克隆到本地：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 语法是 git clone git@github.com:[你的 GitHub 名]/[你的仓库名].git</span></span><br><span class="line">git <span class="built_in">clone</span> git@github.com:Zero-PointEnergy/Zero-PointEnergy.github.io.git</span><br></pre></td></tr></table></figure>
+
+<p>我们可以看到，在本文件夹内出现了以你库名命名的文件夹：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoGitClone.7ex0pplfpec0.png" alt="hexoGitClone"></p>
+<p>以我为例，接下来我需要让 nginx 找到本文件夹 <code>/var/www/wwwroot/blog.zero-pointenergy.net/Zero-PointEnergy.github.io</code> 下的 index.html 主页文件。</p>
+<p>进入 nginx 目录 ( <code>/etc/nginx</code> ) 。这里有我们需要的配置文件。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/nginx</span><br></pre></td></tr></table></figure>
+
+<p>nginx 目录里面有一个 <code>nginx.conf</code> 文件，在目录下有个 conf.d 文件夹，它里面有个 default.conf 。他们的工作方式是 优先使用 nginx.conf ，然后再使用 default.conf 。</p>
+<p>那么显然可以进使用一个 <code>.conf</code> 文件来配置我们的网站。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim nginx.conf</span><br></pre></td></tr></table></figure>
+
+<p>原 html 内容：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">http</span> &#123;</span><br><span class="line">    <span class="string">include</span>       <span class="string">/etc/nginx/mime.types;</span></span><br><span class="line">    <span class="string">default_type</span>  <span class="string">application/octet-stream;</span></span><br><span class="line">    <span class="string">log_format</span>  <span class="string">main</span>  <span class="string">&#x27;$remote_addr - $remote_user [$time_local] &quot;$request&quot;&#x27;</span></span><br><span class="line">                      <span class="string">&#x27;$status $body_bytes_sent &quot;$http_referer&quot; &#x27;</span></span><br><span class="line">                      <span class="string">&#x27;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#x27;</span><span class="string">;</span></span><br><span class="line">    <span class="string">access_log</span>  <span class="string">/var/log/nginx/access.log</span>  <span class="string">main;</span></span><br><span class="line">    <span class="string">sendfile</span>        <span class="string">on;</span></span><br><span class="line">    <span class="comment">#tcp_nopush     on;</span></span><br><span class="line">    <span class="string">keepalive_timeout</span>  <span class="number">65</span><span class="string">;</span></span><br><span class="line">    <span class="comment">#gzip  on;</span></span><br><span class="line">    <span class="string">include</span> <span class="string">/etc/nginx/conf.d/*.conf;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们应该把那行 <code>include /etc/nginx/conf.d/*.conf</code> 先注释掉，因为它会引入 <code>conf.d</code> 文件夹里面的所有配置文件，可能会导致页面报错。</p>
+<p>并且应该增加</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">server</span> &#123;</span><br><span class="line">	<span class="string">listen</span> <span class="number">80</span><span class="string">;</span></span><br><span class="line">	<span class="string">listen</span> <span class="number">443</span><span class="string">;</span>	<span class="comment"># 用于支持 https 协议，可不写</span></span><br><span class="line">	<span class="string">server_name</span> <span class="string">zero-pointenergy.net</span> <span class="string">www.zero-pointenergy.net;</span>	<span class="comment"># 写自己的域名</span></span><br><span class="line">	<span class="string">location</span> <span class="string">/</span> &#123;</span><br><span class="line">		<span class="comment"># root 是你的网站的路径，在该路径下要有主页文件，否则会报错</span></span><br><span class="line">		<span class="string">root</span> <span class="string">/var/www/wwwroot/blog.zero-pointenergy.net/Zero-PointEnergy.github.io;</span></span><br><span class="line">		<span class="string">index</span> <span class="string">index.html</span>	<span class="comment"># index 是你的主页文件。必须包含 主页文件名.后缀</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改为：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">http</span> &#123;</span><br><span class="line">    <span class="string">include</span>       <span class="string">/etc/nginx/mime.types;</span></span><br><span class="line">    <span class="string">default_type</span>  <span class="string">application/octet-stream;</span></span><br><span class="line">    <span class="string">log_format</span>  <span class="string">main</span>  <span class="string">&#x27;$remote_addr - $remote_user [$time_local] &quot;$request&quot;&#x27;</span></span><br><span class="line">                      <span class="string">&#x27;$status $body_bytes_sent &quot;$http_referer&quot; &#x27;</span></span><br><span class="line">                      <span class="string">&#x27;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#x27;</span><span class="string">;</span></span><br><span class="line">    <span class="string">access_log</span>  <span class="string">/var/log/nginx/access.log</span>  <span class="string">main;</span></span><br><span class="line">    <span class="string">sendfile</span>        <span class="string">on;</span></span><br><span class="line">    <span class="comment">#tcp_nopush     on;</span></span><br><span class="line">    <span class="string">keepalive_timeout</span>  <span class="number">65</span><span class="string">;</span></span><br><span class="line">    <span class="comment">#gzip  on;</span></span><br><span class="line">    <span class="comment">#include /etc/nginx/conf.d/*.conf;</span></span><br><span class="line">    <span class="string">server</span> &#123;</span><br><span class="line">        <span class="string">listen</span> <span class="number">80</span><span class="string">;</span></span><br><span class="line">        <span class="string">server_name</span> <span class="string">zero-pointenergy.net</span> <span class="string">www.zero-pointenergy.net;</span></span><br><span class="line">        <span class="string">location</span> <span class="string">/</span> &#123;</span><br><span class="line">                <span class="string">root</span> <span class="string">/var/www/wwwroot/blog.zero-pointenergy.net/Zero-PointEnergy.github.io;</span></span><br><span class="line">                <span class="string">index</span> <span class="string">index.html;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>现在可以通过 <code>server_name</code> 的域名访问了。</p>
+<h5 id="同步"><a href="#同步" class="headerlink" title="同步"></a>同步</h5><h6 id="创建-Git-用户并添加到-root-用户组"><a href="#创建-Git-用户并添加到-root-用户组" class="headerlink" title="创建 Git 用户并添加到 root 用户组"></a>创建 Git 用户并添加到 root 用户组</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">adduser git</span><br><span class="line">gpaaswd -a git root</span><br></pre></td></tr></table></figure>
+
+<p>然后编辑 <code>vim /etc/sudoers</code> 文件，查找到 <code>    root    ALL=(ALL)       ALL</code> 这行。在下行添加 <code>git    ALL=(ALL)       ALL</code> （中间的空格是一个 TAB ）。因为我们刚刚编辑的是 read-only 文件，所以需要通过 <code>:wq!</code> 来强制保存退出。</p>
+<h6 id="创建-Git-仓库"><a href="#创建-Git-仓库" class="headerlink" title="创建 Git 仓库"></a>创建 Git 仓库</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">su git</span><br><span class="line"><span class="built_in">cd</span></span><br><span class="line">mkdir blog.git</span><br><span class="line"><span class="built_in">cd</span> blog.git</span><br><span class="line">git init --bare</span><br></pre></td></tr></table></figure>
+
+<p>请注意：可能会需要在此处进入 <code>branches</code> 目录，创建你的分支文件夹才可在后续执行 <code>hexo d</code> 命令时在 GitHub 和你的服务器上同步部署。否则服务器端通过 Git Hooks 同步部署将会失效。可执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> branches</span><br><span class="line">mkdir master</span><br></pre></td></tr></table></figure>
+
+<p>此处建立的 <code>master</code> 文件夹是分支目录。虽然GitHub 把默认分支从 <code>master</code> 改为了 <code>main</code> ，你推到 GitHub 的时候已经使用了 <code>main</code> 分支，那么不能再使用它，因为他们同名会导致只能部署到一处。所以我还是给在 VPS 上建为 <code>master</code> 了，如此配置可以保证推完 GitHub 还能继续同步至我们的 VPS 上。</p>
+<p>随后需要将 <code>/var/www/wwwroot/blog.zero-pointenergy.net/Zero-PointEnergy.github.io</code> 目录的拥有者变更为 git</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chown git:git -R /var/www/wwwroot/blog.zero-pointenergy.net/Zero-PointEnergy.github.io</span><br></pre></td></tr></table></figure>
+
+<h5 id="SSH-Key-配置"><a href="#SSH-Key-配置" class="headerlink" title="SSH Key 配置"></a>SSH Key 配置</h5><p>需要先获取你本地电脑的 SSH Key，找到 <code>id_rsa.pub</code> 文件。Windows 用户的这个文件一般在 <code>C:\Users\用户名\.ssh</code>  路径下。</p>
+<p>打开并复制里面的内容并写入到服务器的 <code>authorized_keys</code> 中。我是复制之后登录到 VPS 上粘贴进去的（我不会那个命令），其路径在 <code>~/.ssh</code> 。</p>
+<p>请自行粘贴到 <code>authorized_keys</code> ，同时确保内容只有一行。</p>
+<h5 id="添加-Git-Hooks"><a href="#添加-Git-Hooks" class="headerlink" title="添加 Git Hooks"></a>添加 Git Hooks</h5><p>现在我们需要编辑 <code>post-receive</code> 。它的路径应该要在刚刚建立的 blog.git 内，为 <code>~/blog.git/hooks/</code> 。</p>
+<p>那么运行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">su git</span><br><span class="line"><span class="built_in">cd</span> ~/blog.git/hooks</span><br><span class="line">vim post-receive</span><br></pre></td></tr></table></figure>
+
+<p>然后输入以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"> GIT_REPO=/home/git/blog.git</span><br><span class="line"> TMP_GIT_CLONE=/tmp/blog</span><br><span class="line"> PUBLIC_WWW= <span class="comment">#此处填入上方更改目录所有者时的路径</span></span><br><span class="line"> rm -rf <span class="variable">$&#123;TMP_GIT_CLONE&#125;</span></span><br><span class="line"> git <span class="built_in">clone</span> <span class="variable">$GIT_REPO</span> <span class="variable">$TMP_GIT_CLONE</span></span><br><span class="line"> rm -rf <span class="variable">$&#123;PUBLIC_WWW&#125;</span>/*</span><br><span class="line"> cp -rf <span class="variable">$&#123;TMP_GIT_CLONE&#125;</span>/* <span class="variable">$&#123;PUBLIC_WWW&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>最后需要修改 <code>post-receive</code> 的文件权限，使它可执行。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod +x post-receive</span><br></pre></td></tr></table></figure>
+
+<h5 id="Hexo-配置"><a href="#Hexo-配置" class="headerlink" title="Hexo 配置"></a>Hexo 配置</h5><p>回到本地。</p>
+<p>将自己的 Hexo 文件夹的站点配置文件 <code>_config.yml</code> 在稍微修改下，增加 VPS 的 repo：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">git@github.com:Zero-PointEnergy/Zero-PointEnergy.github.io.git</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">main</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">git@zero-pointenergy.net:/~/blog.git</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+<p>等等，怎么和上面<a href="#deployToGithub">部署在 GitHub</a> 的时候好像不一样啊喂？为什么要这样写？</p>
+<p>Hexo 是支持多端同步部署的。它有个语法是：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">main</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">git@[你自己的服务器</span> <span class="string">IP</span> <span class="string">或域名]:[blog.git</span> <span class="string">路径]</span></span><br><span class="line">    <span class="attr">branch:</span> [<span class="string">自己的分支</span>]</span><br></pre></td></tr></table></figure>
+
+<p>其中的 <code>&lt;username&gt;</code> 就是需要用你自己的 GitHub 的用户名替换，出现的 <code>[]</code> 请根据提示信息自行填入。</p>
+<p>现在可以在 <code>hexo g -d</code> 的时候同时同步在 GitHub 和 VPS 上了。 </p>
+<p>一切准备就绪。</p>
+<h2 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h2><h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>我感觉 Hexo 的默认主题太泛滥了，有些许厌恶。于是浏览了 <a class="link"   href="https://hexo.io/themes/" >Hexo Themes<i class="fas fa-external-link-alt"></i></a> 后觉得 Keep 这个主题还不错，于是选用了它。那么就以 Keep 为例，进行主题的替换。</p>
+<p>在 <a class="link"   href="https://xpoet.cn/" >XPoet’s Blog<i class="fas fa-external-link-alt"></i></a> 中，给出了关于 Keep 主题的使用指南。以下将围绕官方文档进行主题安装。</p>
+<h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><p>先进入你的 Blog 的根目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo-site</span><br></pre></td></tr></table></figure>
+
+<p>随后可以选择使用 <code>npm</code> 的方式：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-keep</span><br></pre></td></tr></table></figure>
+
+<p>或使用 <code>git</code> 方式：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/XPoet/hexo-theme-keep themes/keep</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>找到你 Blog 的根文件夹下的 _config.yml 文件，打开它，找到 <code>themes</code> 修改它冒号后面的内容为你的主题名。</p>
+<p>例如，默认的是：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">landscape</span></span><br></pre></td></tr></table></figure>
+
+<p>修改为自己想要的主题是：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">keep</span></span><br></pre></td></tr></table></figure>
+
+<p>立竿见影的效果！</p>
+<h4 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h4><p>若是通过 npm 更改：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo-site</span><br><span class="line">npm update hexo-theme-keep</span><br></pre></td></tr></table></figure>
+
+<p>通过 git 更新则：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo-site/themes/keep</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>从这里开始我们将接触到 _config.yml 文件。它并不是站点配置的那个，而是主题配置文件。这里要配置的 _config.yml 文件位于 themes/[主题名] 下。</p>
+<h5 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h5><p>此处用于配置网站的基本信息。</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoThemeConfigYML_basicInfo.2svuzrg01jc0.png" alt="hexoThemeConfigYML_basicInfo" style="zoom:50%;" />
+
+<p><code>title</code> 是显示在网站顶部左上角的信息。它不是 HTML 中 <code>&lt;title&gt;</code> 标签对应的 title 。</p>
+<p><code>author</code> 是显示在页面底部和内容页的作者昵称。</p>
+<p><code>url</code> 是将用于文章内容页面版权信息模块，让其能够正确拼接文章链接。</p>
+<h5 id="基本样式"><a href="#基本样式" class="headerlink" title="基本样式"></a>基本样式</h5><p>此处用于配置网站的基本样式。</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoThemeConfigYML_styleSettings.5dwmdqj29gw0.png" alt="hexoThemeConfigYML_styleSettings" style="zoom:50%;" />
+
+<p><code>primary_color</code> 是网站的主题色。</p>
+<p><code>avatar</code> 是作者头像，显示在文章内容页。可以使用本地图片 ( 路径是<code>keep/source/images</code> 下的图片)，也可使用外链 URL</p>
+<p><code>favicon</code> 是网站 favicon 图标。即是浏览器上方标签页的 icon 。引用方式同 <code>avatar</code> 。</p>
+<p><code>article_img_align</code> 是设置文章内容页的图片排列位置。默认 <code>left</code> ，可选 <code>left</code> ，<code>center</code> 。</p>
+<p><code>hover</code> 是设置鼠标悬浮时的样式 ( 主页文章块、TOC 目录块、按钮等 )，允许分别开启阴影 <code>shadow</code> 和缩放 <code>scale</code> 效果。</p>
+<p><code>frist_screen</code> 是本主题 3.0.0 版本时新增的首屏模块，开启后会显示在网站首页。<code>eanble</code> 是否开启，<code>background</code> 首屏背景图片，引用方式同 <code>favicon</code> ，<code>description</code> 是首屏描述。</p>
+<p><code>scroll</code> 是设置页面滚动时的样式。<code>progress_bar</code> 是页面滚动时顶部显示滚动进度条，<code>percent</code> 页面滚动时右下角显示滚动百分比。</p>
+<h5 id="第三方链接"><a href="#第三方链接" class="headerlink" title="第三方链接"></a>第三方链接</h5><p>此处用于配置第三方社交连接。</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoThemeConfigYML_socialMedia.4l9ep0q6qbg0.png" alt="hexoThemeConfigYML_socialMedia" style="zoom:50%;" />
+
+<p>注意：<code>social_contact</code> 仅在首屏开启时有效。</p>
+<p>如要<strong>更改图标</strong>或<strong>添加其他第三方的链接</strong>请参考 <a class="link"   href="https://keep-docs.xpoet.cn/usage-tutorial/configuration-guide.html#social-contact" >此处<i class="fas fa-external-link-alt"></i></a> 。</p>
+<h5 id="导航菜单"><a href="#导航菜单" class="headerlink" title="导航菜单"></a>导航菜单</h5><p>此处用于配置顶部导航菜单。</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoThemeConfigYML_navigatonMenu.52d06o846000.png" alt="hexoThemeConfigYML_navigatonMenu" style="zoom:50%;" />
+
+<p>若需新增导航菜单，需要按照上方格式增加，并且需要创建相对应的 Hexo 页面。</p>
+<p>Hexo 并不自带 categories, tags, about, links 等页面，需自行创建。</p>
+<p>创建实例请参考 <a class="link"   href="https://keep-docs.xpoet.cn/usage-tutorial/configuration-guide.html#menu" >此处<i class="fas fa-external-link-alt"></i></a> 。</p>
+<h5 id="标签和分类"><a href="#标签和分类" class="headerlink" title="标签和分类"></a>标签和分类</h5><p>此处用于设置首页文章块底部的标签和分类信息显示。</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoThemeConfigYML_homeArticle.1s9buyp9s8ww.png" alt="hexoThemeConfigYML_homeArticle" style="zoom:50%;" />
+
+<p><code>category</code> 是文章分类。</p>
+<p><code>tag</code> 是文章标签。</p>
+<p><code>limit</code> 是限制显示的个数。</p>
+<h5 id="字数、阅读时长统计和作者标识。"><a href="#字数、阅读时长统计和作者标识。" class="headerlink" title="字数、阅读时长统计和作者标识。"></a>字数、阅读时长统计和作者标识。</h5><p>此处用于设置是否显示文章字数统计、阅读时长和作者标识。</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoThemeConfigYML_postSettings.6tiqhrqag7g0.png" alt="hexoThemeConfigYML_postSettings" style="zoom:50%;" />
+
+<p><code>word_count</code> ：如需开启文章字数统计和阅读时长，需在项目根目录安装依赖 Hexo-wordcount 。执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-wordcount</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>wordcount</code> 是文章字数统计</li>
+<li><code>min2read</code> 是文章阅读时长</li>
+</ul>
+<p><code>author_label</code> ：设置文章内容页的<strong>作者标识</strong>，官方给出了两种方案：</p>
+<ol>
+<li><code>auto</code> 自动生成 <code>Lv1</code> , <code>Lv2</code> , <code>Lv3</code>,……。依据是文章数量。</li>
+<li><code>custom_label_list</code> 自定标识列表，数组项大于等于一个。依据是文章数量。</li>
+</ol>
+<h5 id="代码复制"><a href="#代码复制" class="headerlink" title="代码复制"></a>代码复制</h5><p>此处用于设置<strong>代码复制</strong>功能。</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoThemeConfigYML_codeCopy.11vua09elpwg.png" alt="hexoThemeConfigYML_codeCopy" style="zoom:50%;" />
+
+<p>若开启，则支持一键复制到粘贴板。</p>
+<p><code>enable</code> 是否开启。</p>
+<p><code>style</code> 设置该功能样式，可选 <code>default</code> 或 <code>mac</code> 。</p>
+<h5 id="文章-TOC-目录"><a href="#文章-TOC-目录" class="headerlink" title="文章 TOC 目录"></a>文章 TOC 目录</h5><p>此处用于设置文章 TOC 目录。</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoThemeConfigYML_toc.6dhxm78t88s0.png" alt="hexoThemeConfigYML_toc" style="zoom:50%;" />
+
+<p>该功能可以快速查看文章目录结构和跳转。</p>
+<p><code>number</code> 为目录自动添加数字。</p>
+<p><code>expand_all</code> 展开所有目录结构，其中：</p>
+<ul>
+<li>为 <code>true</code> 的效果是自动展开所有目录结构。</li>
+<li>为 false 的效果是滚动页面时展开对应位置的目录。</li>
+</ul>
+<p><code>init_open</code> 打开文章页时是否自动打开 TOC 目录结构。</p>
+<h5 id="版权信息"><a href="#版权信息" class="headerlink" title="版权信息"></a>版权信息</h5><p>此处用于开启文章内容页的文章版权信息模块。</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoThemeConfigYML_copyright.5rvrtigbczc0.png" alt="hexoThemeConfigYML_copyright" style="zoom:50%;" />
+
+<h5 id="网站计数"><a href="#网站计数" class="headerlink" title="网站计数"></a>网站计数</h5><p>此处用于设置网站的计数。</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoThemeConfigYML_webCount.l239af5xlg0.png" alt="hexoThemeConfigYML_webCount" style="zoom:50%;" />
+
+<p>本主题已经内置<strong>不蒜子</strong>计数，不用额外配置，可直接选择计数项。</p>
+<p><code>site_uv</code> 是网站访问人数 ( 底部显示 )</p>
+<p><code>site_pv</code> 是网站总访问量 ( 底部显示 )</p>
+<p><code>page_pv</code> 是文章阅读次数 ( 文章内容页显示 )</p>
+<h5 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h5><p>此处用于站内搜索，实用可开。</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoThemeConfigYML_localSearch.19m3m11b0xog.png" alt="hexoThemeConfigYML_localSearch" style="zoom:50%;" />
+
+<p>需在项目根目录安装插件 <code>hexo-generator-searchdb</code> ，执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb</span><br></pre></td></tr></table></figure>
+
+<p>在站点配置文件添加</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Search</span></span><br><span class="line"><span class="comment">## See: https://github.com/theme-next/hexo-generator-searchdb</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.json</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">content:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">striptags</span></span><br></pre></td></tr></table></figure>
+
+<p>并在主题配置文件中将 <code>local_search.enable</code> 的值设为 <code>true</code> 。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p><code>preload</code> 是表示是否在页面加载时预加载搜索数据。</p>
+<h5 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h5><p>此处用于开关主题的评论系统。</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoThemeConfigYML_comment.7crfhjkj9y80.png" alt="hexoThemeConfigYML_comment" style="zoom:50%;" />
+
+<p><code>use</code> 是选择哪款评论系统。本主题内置了 <code>Valine</code> , <code>Gittalk</code> 和 <code>Twikoo</code> 。</p>
+<p>关于评论系统详情请参考 <a class="link"   href="https://keep-docs.xpoet.cn/usage-tutorial/configuration-guide.html#comment" >此处<i class="fas fa-external-link-alt"></i></a> 。</p>
+<h5 id="RSS-订阅"><a href="#RSS-订阅" class="headerlink" title="RSS 订阅"></a>RSS 订阅</h5><p>此处用途开启 RSS 订阅功能。</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoThemeConfigYML_RSS.3ush1qi8a5i0.png" alt="hexoThemeConfigYML_RSS" style="zoom:50%;" />
+
+<p>开启流程是：</p>
+<ol>
+<li><p>在项目根目录安装插件 <code>hexo-generator-feed</code> ，执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed</span><br></pre></td></tr></table></figure></li>
+<li><p>在站点配置文件增加以下内容：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Feed Atom</span></span><br><span class="line"><span class="comment"># npm install hexo-generator-feed</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure></li>
+<li><p>在主题配置文件中开启 RSS：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">rss:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
+<li><p>RSS 订阅功能开启后，在页面右下角工具按钮组内会出现 RSS 按钮。</p>
+</li>
+</ol>
+<h5 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h5><p>此处用于开启图片懒加载。</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoThemeConfigYML_lazyLoad.13ucaauovqqk.png" alt="hexoThemeConfigYML_lazyLoad" style="zoom:50%;" />
+
+<p>开启后，打开页面时不会加载所有图片。只有当视窗滚动到图片位置时才加载对应图片资源。</p>
+<p>图片过多时开启懒加载可以有效提高加载速度。</p>
+<h5 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h5><p>此处用于开启 CDN 加速功能。</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoThemeConfigYML_CDN.610jl4oz3w40.png" alt="hexoThemeConfigYML_CDN" style="zoom:50%;" />
+
+<p>若你的 Blog 部署在海外服务器，建议开启 CDN。打开页面是会有较快的加载速度。</p>
+<p>JS 资源和 CSS 资源的 CDN 请参考 <a class="link"   href="https://keep-docs.xpoet.cn/usage-tutorial/configuration-guide.html#cdn" >此处<i class="fas fa-external-link-alt"></i></a> 。</p>
+<h5 id="PJAX"><a href="#PJAX" class="headerlink" title="PJAX"></a>PJAX</h5><p>此处用于开启主题 PJAX 功能。</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoThemeConfigYML_PJAX.xt14gtje8lc.png" alt="hexoThemeConfigYML_PJAX" style="zoom:50%;" />
+
+<p>PJAX 开启后，当页面转跳时，页面的顶部会出现彩色进度条。</p>
+<h5 id="FOOTER"><a href="#FOOTER" class="headerlink" title="FOOTER"></a>FOOTER</h5><p>此处用于设置网站底部的信息展示。</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoThemeConfigYML_footerSettings.6t2e2m9ado00.png" alt="hexoThemeConfigYML_footerSettings" style="zoom:50%;" />
+
+<p><code>since</code> 是设置网站起始年份。可为空值。</p>
+<p><code>icp</code> 是设置网站 ICP 备案号。可为空值。</p>
+<p>进阶设置和更多请参照 <a class="link"   href="https://keep-docs.xpoet.cn/" >Keep 主题官方文档 <i class="fas fa-external-link-alt"></i></a> 。</p>
+<h2 id="我遇到的错误"><a href="#我遇到的错误" class="headerlink" title="我遇到的错误"></a>我遇到的错误</h2><ol start="0">
+<li><p>重启 nginx 时，报 <code>nginx: [error] open() &quot;/var/run/nginx.pid&quot; failed (2: No such file or directory)</code></p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/nginxErrOpenNginxPID_failed.5qpc1vsc9h40.png" alt="nginxErrOpenNginxPID_failed"  />
+
+<p>这个问题 nginx 尚未启动导致的。将 nginx 启动即可解决。</p>
+<p>参考链接：<a class="link"   href="https://github.com/nginxinc/nginx-amplify-agent/issues/166" >https://github.com/nginxinc/nginx-amplify-agent/issues/166<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>执行 <code>hexo d</code> 的时候，提示 <code>ERROR Deployer not found: git</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoDeployerNotFoundGit.app6q9xe8gs.png" alt="hexoDeployerNotFoundGit"></p>
+<p>这个问题只是在执行部署命令的时候，git 的信息未填写导致的。在配置了 git 的信息之后，问题解决。配置方式请参考 <a href="#Git_Install">此处</a> 。</p>
+</li>
+<li><p>执行 <code>hexo init</code> 时，报 <code>Error: EPERM: operation not permitted, mkdir &#39;&#39;</code> 错误</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoOperateNotPermitted_mkdir.1dwe5vnnm5eo.png" alt="hexoOperateNotPermitted_mkdir"></p>
+<p>这个问题是权限问题，只要以管理员权限启动命令行 / 终端就可解决大部分问题。</p>
+</li>
+<li><p>在执行 <code>hexo init</code> 时，报 <code>..\nodejs\node_global\hexo.ps1 cannot be loaded because ruuning scripts is disabled on this system.</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/hexoScriptsDisabled.6li4yrm48200.png" alt="hexoScriptsDisabled"></p>
+<p>这个错误是 <code>PowerShell</code> 的执行策略导致的，为了防止恶意脚本的执行。</p>
+<p>要解决这个问题很简单，请执行以下命令：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> <span class="literal">-ExecutionPolicy</span> RemoteSigned <span class="literal">-Scope</span> <span class="keyword">Process</span></span><br></pre></td></tr></table></figure>
+
+<p>上述命令被执行后不再报执行策略错误。</p>
+</li>
+<li><p>正确修改 nginx 之后访问网站出现的 403 Forbidden 错误</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211202/webSiteNginx403Forbidden.6saq0e2ufgg0.png" alt="webSiteNginx403Forbidden" style="zoom:50%;" />
+
+<p>用 yum 安装的 nginx 默认目录在 <code>/usr/share/</code> 下，当 SELinux 开启将会禁止访问在其他路径下的地址。</p>
+<p>既然如此只需要将 SELinux 关闭即可：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/sysconfig/selinux</span><br></pre></td></tr></table></figure>
+
+<p>在内容中找到 <code>SELINUX=enforcing</code> 将其修改成:</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">SELINUX=disabled</span></span><br></pre></td></tr></table></figure>
+
+<p>问题被解决。</p>
+</li>
+<li><p>无法部署到 GitHub 或 VPS 或其他：</p>
+<p>把 Hexo 项目根目录的 <code>.deploy_git</code> 文件夹删了，然后重新执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+
+<p>如果不行，多试几次。</p>
+</li>
+<li><p>其他问题忘记截图了，诶嘿~</p>
+</li>
+</ol>
+]]></content>
+  </entry>
+</search>

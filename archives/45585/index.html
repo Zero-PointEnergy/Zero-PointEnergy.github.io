@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="个人博客，记录生活 / 学习杂事">
+    <meta name="author" content="Zero-PointEnergy">
+    
+    <title>
+        
+            网站优化（一）：请求 Google 收录个人网站 |
+        
+        真空零点
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"zero-pointenergy.net","root":"/","language":"en","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.png","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"大 都 好 物 不 坚 牢 ， 彩 云 易 散 琉 璃 脆 。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="真空零点" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                真空零点
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class="active"
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active"
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">网站优化（一）：请求 Google 收录个人网站</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.png">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Zero-PointEnergy</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-12-04 16:42:54
+    </span>
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.5k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>5 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="Google-Search-Console"><a href="#Google-Search-Console" class="headerlink" title="Google Search Console"></a>Google Search Console</h1><h2 id="这是什么？"><a href="#这是什么？" class="headerlink" title="这是什么？"></a>这是什么？</h2><p>来自维基百科的解释是：</p>
+<blockquote>
+<p>Google Search Console is a web service by Google which allows webmasters to check indexing status and optimize visibility of their websites.</p>
+<p>Google Search Console 是 Google 推出的一款面向网站管理员查询网站收录状态和调整网站曝光率的工具。</p>
+</blockquote>
+<p>它可以将自己的网站提交给 Google 以显示在搜索结果中。</p>
+<p>那么该如何设置？</p>
+<h2 id="开始设置"><a href="#开始设置" class="headerlink" title="开始设置"></a>开始设置</h2><h3 id="注册-Google-账号"><a href="#注册-Google-账号" class="headerlink" title="注册 Google 账号"></a>注册 Google 账号</h3><p>答案：略</p>
+<p>解析：和其他网站相似的注册流程，这里就略过了。要注意的是，使用中国手机号可能无法通过注册。</p>
+<h3 id="进入-GSC"><a href="#进入-GSC" class="headerlink" title="进入 GSC"></a>进入 GSC</h3><p>访问 <a class="link"   target="_blank" rel="noopener" href="https://search.google.com/search-console/about" >Google Search Console<i class="fas fa-external-link-alt"></i></a> ，点击 Start Now ，随后需要添加一个 Property ( 中文是：资源 ) 。</p>
+<p>Google 提供了两种类型进行验证：一个是 Domain，一个是 URL prefix 。</p>
+<p>使用 Domain 验证的话可以不必再次验证其子域名，并且支持使用 http 或 https 协议。使用 Domain 添加 Property 是通过 DNS 进行验证。本人采用的是此方法。</p>
+<p>使用 URL prefix 则是进行网址前缀的验证。验证的范围仅仅只有包含这个前缀的地址。比如有个域名是 example.com ，它有子域名 blog.example.com ，news.example.com, 那么现在对 blog.example.com 进行 URL Prefix 方式的验证，那么想要配置 news.example.com 的话就需要添加一个新的 property 。如果是对 example.com 进行了 Domain 方式的验证，对其所有子域名都不需要再添加新的 property 即可进行配置。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/googleSearchConsolePropertyType.13guntm883ds.png" alt="googleSearchConsolePropertyType"></p>
+<div class="admonition note"></div>
+
+<p>   注意：请依照文本框中的格式输入。domain 类型只需要直接填入域名，而 URL prefix 类型的需要加上传输协议和三级域名。</p>
+<p>选择对应的 property 类型，输入自己的域名之后点 continue 继续。</p>
+<p>等它稍微验证一下会出现以下界面：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/googleSearchConsoleVerifybyDNSRecord.777cncildpg0.png" alt="googleSearchConsoleVerifybyDNSRecord"></p>
+<p>可以通过选择 Instructions for 的下拉列表选择你的提供商。</p>
+<p>在下拉列表中的提供商可以快速验证域名的所有权。因为我的域名提供商是 <a class="link"   target="_blank" rel="noopener" href="https://www.namesilo.com/" >NameSilo<i class="fas fa-external-link-alt"></i></a> 。所以我选择了 <code>NameSilo</code> ：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/googleSearchConsoleVerifybyDNSRecord_NameSilo.7ihbgp1al3s0.png" alt="googleSearchConsoleVerifybyDNSRecord_NameSilo"></p>
+<p>然后直接点击 Verify 转跳绑定授权页，然后会自动验证。</p>
+<p>这个时候我就报错了。</p>
+<p>奇了怪了，怎么不行？</p>
+<p>反复折腾了五六个来回之后我想起来了，对我域名进行 DNS 解析的是在 <a class="link"   target="_blank" rel="noopener" href="https://www.cloudflare.com/" >CloudFlare<i class="fas fa-external-link-alt"></i></a> 上进行的，那么就应该是在 CloudFlare 上验证才是正确的。（ 如果之前未利用 CloudFlare 进行 CDN 加速的可以尝试添加进去或者寻找其他方法 ）</p>
+<p>先复制 Google Search Console 给你的 TXT record 文本（ 见上方 <code>Verify domain ownership via DNS record</code> 第 2 点）</p>
+<p>然后登陆之后在主页点击出现的有我们域名的标签，</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/cloudFlareMainPage.69r1de7gkno0.png" alt="cloudFlareMainPage" style="zoom:50%;" /> 
+
+<p>点击左侧的 DNS 选项，找到：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/cloudFlareDNSAddRecord.jzzgh1ii8w0.png" alt="cloudFlareDNSAddRecord"></p>
+<p>点击 <code>添加记录</code> ，将显示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/cloudFlareDNSAddRecordDefault.5dfooxijmwo0.png" alt="cloudFlareDNSAddRecordDefault"></p>
+<p>我们要将类型改为 TXT ，然后如图填写：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/cloudFlareDNSAddRecordTXT.5orbrmyffdw0.png" alt="cloudFlareDNSAddRecordTXT"></p>
+<p>其中，在名称一栏输入字符 <code>@</code> ，在内容框中把我们复制好的 TXT record 文本粘贴进来，点保存。</p>
+<p>你会看到在下方已经出现了类型为 TXT 的记录。</p>
+<p>现在可以返回到刚刚的 Google Search Console 页面，点击验证，等待 Google 处理。若失败请等待至少 1 小时后再试，因为添加的记录可能可能不会有那么快生效。</p>
+<p>成功界面如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/googleSearchConsoleVerifybyDNSRecordSuccess.11x4cxiiwa00.png" alt="googleSearchConsoleVerifybyDNSRecordSuccess"></p>
+<p>点击 <code>GO TO PROPERTY</code> ，进入 GSC 的界面，找到左侧的 <code>URL inspection</code> 并点击，在搜索框中输入自己的域名，回车。</p>
+<p>GSC 将会有如下结果：</p>
+<img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/googleSearchConsoleURLInspectionNotOnGoogle.3ny0njbov8s0.png" alt="googleSearchConsoleURLInspectionNotOnGoogle" style="zoom:50%;" />
+
+<p>这时点击 <strong>URL is not on Google</strong> 模块右下角的 <strong>REQUEST INDEXING</strong> 去请求提交给 Google 。这相当于跟 Google 说：我这里有个网站，你来看看。等到 Google 检测完了之后就请耐心等待，不要去重复提交。</p>
+<p>接到 Google 发给你的邮件说已经收录之后，再次打开这个页面将会显示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/googleSearchConsoleURLInspectionIstOnGoogle.3ysfelv4h3g0.png" alt="googleSearchConsoleURLInspectionIstOnGoogle"> </p>
+<p>现在你的域名可以在 Google 上被搜到了。</p>
+<h3 id="Sitemaps"><a href="#Sitemaps" class="headerlink" title="Sitemaps?"></a>Sitemaps?</h3><p>这个玩意好像中文名是叫「站点地图」，维基上的解释是 “A site map (or sitemap) is a list of pages of a web site within a domain.” 它描述了网站的架构。</p>
+<blockquote>
+<p>Google 在很大程度上是通过链接找到网页，如果您的网站是全新的，并且只有很少的外部反向链接，那么网站地图非常适合帮助 Google 在您的网站上查找页面。</p>
+<p>源自 <a class="link"   target="_blank" rel="noopener" href="https://www.eula.club/%E6%90%AD%E5%BB%BAHexo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%B9%B6%E4%BD%BF%E7%94%A8Git%E9%83%A8%E7%BD%B2%E5%88%B0VPS.html#8-SEO%E5%88%86%E6%9E%90%E4%BC%98%E5%8C%96" >此处<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+<p>我们可以在 Hexo 根目录下打开命令行 / 终端，执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<p>然后在站点配置文件 <code>_config.yml</code> 内修改 <code>URL</code> 部分内容：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">http://yoursite.com</span></span><br></pre></td></tr></table></figure>
+
+<p>将其中的 <code>yoursite.com</code> 替换成自己的域名：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">http://zero-pointenergy.net</span></span><br></pre></td></tr></table></figure>
+
+<p>然后在文件末尾添加：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br><span class="line">  <span class="attr">rel:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>然后生成一个叫蜘蛛文件的东西，它的用途是指定 Google 爬虫哪些路径可以访问，哪些路径不可以访问。</p>
+<p>我们在 <code>.\source</code> 文件夹下建一个名为 <code>robots</code> 的文本文档，输入并保存以下内容：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">User-agent:</span> <span class="string">*</span></span><br><span class="line"><span class="attr">Allow:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">Allow:</span> <span class="string">/archives/</span></span><br><span class="line"><span class="attr">Allow:</span> <span class="string">/categories/</span></span><br><span class="line"><span class="attr">Allow:</span> <span class="string">/tags/</span> </span><br><span class="line"><span class="attr">Allow:</span> <span class="string">/resources/</span> </span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/vendors/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/js/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/css/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/fonts/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/vendors/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/fancybox/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Sitemap:</span> <span class="string">https://zero-pointenergy.net/sitemap.xml</span></span><br></pre></td></tr></table></figure>
+
+<p>随后通过：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>即可在 <code>.\public</code> 文件夹下生成 sitemap.xml 文件和 robots.txt 文件。</p>
+<p>再通过 <code>hexo d</code> 进行部署。</p>
+<p>回到你的 Google Search Console 页面，点击左侧菜单中的 <code>Sitemaps</code> ，在 Add a new sitemap 处填入 http://你的域名/ ，然后点右方的 SUBMIT 按钮，稍待片刻即会提示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zero-PointEnergy/imagesForBlog@master/20211204/googleSearchConsoleSitemapSubmittedSuccessfully.47ofozr1g880.png" alt="googleSearchConsoleSitemapSubmittedSuccessfully"></p>
+<p>那么便成功向 Google 提交了你网站的站点地图。</p>
+<h3 id="优化网址路径"><a href="#优化网址路径" class="headerlink" title="优化网址路径"></a>优化网址路径</h3><p>现在为止，我们博客的连接总是会跟着 <code>/year/month/day/</code> 这样的路径，又长又对搜索引擎不是很友好，我们得优化一下。</p>
+<p>安装 <code>hexo-abbrlink</code> 插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+
+<p>在站点配置文件内修改 <code>permalink</code> 部分：</p>
+<p>要从：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br></pre></td></tr></table></figure>
+
+<p>改成：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># permalink: :year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">archives/:abbrlink/</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line">  <span class="attr">alg:</span> <span class="string">crc32</span></span><br><span class="line">  <span class="attr">rep:</span> <span class="string">hex</span></span><br></pre></td></tr></table></figure>
+
+<p>其中的 <code>alg:</code> 是算法，默认是 crc16 ；<code>rep</code> 是进制，默认是 dec 。</p>
+<p>然后通过：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+
+<p>进行部署即可。</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：网站优化（一）：请求 Google 收录个人网站</li>
+        <li>Post author：Zero-PointEnergy</li>
+        <li>Create time：2021-12-04 16:42:54</li>
+        <li>
+            Post link：https://www.zero-pointenergy.net/archives/45585/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/archives/65090/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Typora 完全使用手册</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>
+              -
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Zero-PointEnergy</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Google-Search-Console"><span class="nav-text">Google Search Console</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-text">这是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E8%AE%BE%E7%BD%AE"><span class="nav-text">开始设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C-Google-%E8%B4%A6%E5%8F%B7"><span class="nav-text">注册 Google 账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5-GSC"><span class="nav-text">进入 GSC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sitemaps"><span class="nav-text">Sitemaps?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E7%BD%91%E5%9D%80%E8%B7%AF%E5%BE%84"><span class="nav-text">优化网址路径</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

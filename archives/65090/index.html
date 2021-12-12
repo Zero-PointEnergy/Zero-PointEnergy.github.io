@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="个人博客，记录生活 / 学习杂事">
+    <meta name="author" content="Zero-PointEnergy">
+    
+    <title>
+        
+            Typora 完全使用手册 |
+        
+        真空零点
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"zero-pointenergy.net","root":"/","language":"en","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.png","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"大 都 好 物 不 坚 牢 ， 彩 云 易 散 琉 璃 脆 。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="真空零点" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                真空零点
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class="active"
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active"
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Typora 完全使用手册</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.png">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Zero-PointEnergy</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-12-03 18:08:15
+    </span>
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.4k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>5 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>​    本手册是基于少数派的 <a class="link"   target="_blank" rel="noopener" href="https://sspai.com/post/54912"  title="Typora 完全使用详解">文章 <i class="fas fa-external-link-alt"></i></a> 而成，几乎全文是少数派的内容。这是因为最开始我并不打算上传到我的博客，而仅仅作为我入门 Typora 的一篇本地指导性文档。但是因为在完成之后发现 Typora 是如此美妙，也有搭建个人博客的打算，综合考虑下就写下了这段声明性的文字。</p>
+<hr>
+
+<h2 id="什么是-Typora？"><a href="#什么是-Typora？" class="headerlink" title="什么是 Typora？"></a>什么是 Typora？</h2><p>Typora 是支持实时预览的 Markdown 文本编辑器。</p>
+<h2 id="一个-Markdown-文本编辑器"><a href="#一个-Markdown-文本编辑器" class="headerlink" title="一个 Markdown 文本编辑器"></a>一个 Markdown 文本编辑器</h2><p>它首先是一个 Markdown 文本编辑器，支持且仅支持 Markdown 语法的文本编辑。</p>
+<p>官网<a class="link"   target="_blank" rel="noopener" href="https://typora.io/" >^1<i class="fas fa-external-link-alt"></i></a>描述它是「A truly <strong>minimal</strong> markdown editor. 」</p>
+<h3 id="关于-Markdown"><a href="#关于-Markdown" class="headerlink" title="关于 Markdown"></a>关于 Markdown</h3><p>Markdown 是用于编写结构化文档的一种纯文本格式，可以实现双手不离键盘的情况下对文本内容做出一定的格式化排版。 <a class="link"   target="_blank" rel="noopener" href="https://sspai.com/post/36610"  title="快速入门 Markdown">入门 Markdown 。<i class="fas fa-external-link-alt"></i></a></p>
+<p>目前 Markdown 采用的语法规则是较为认可的 GFM 标准<a class="link"   target="_blank" rel="noopener" href="https://github.github.com/gfm/" >^2<i class="fas fa-external-link-alt"></i></a> ( GitHub 制定 )。可在 ⌈ 文件 - 偏好设置 - Markdown 语法偏好 - 严格模式 ⌋ 设置标准模式为 ⌈ 更严格地遵循 GFM 标准 ⌋</p>
+<h3 id="写得舒服"><a href="#写得舒服" class="headerlink" title="写得舒服"></a>写得舒服</h3><ul>
+<li><h4 id="智能标点-3"><a href="#智能标点-3" class="headerlink" title="智能标点^3"></a>智能标点<a class="link"   target="_blank" rel="noopener" href="http://support.typora.io/SmartyPants/" >^3<i class="fas fa-external-link-alt"></i></a></h4></li>
+<li><h4 id="图片插入"><a href="#图片插入" class="headerlink" title="图片插入"></a>图片插入</h4></li>
+<li><h4 id="打字机模式和专注模式"><a href="#打字机模式和专注模式" class="headerlink" title="打字机模式和专注模式"></a>打字机模式和专注模式</h4><ul>
+<li><p><strong>⌈打字机模式⌋</strong> 编辑的那行永远处于屏幕正中</p>
+</li>
+<li><p><strong>⌈专注模式⌋</strong> 保留正在编辑的那行的颜色，其他行数的字体呈灰色</p>
+</li>
+</ul>
+</li>
+<li><h4 id="实时预览"><a href="#实时预览" class="headerlink" title="实时预览"></a>实时预览</h4></li>
+</ul>
+<p>该功能指的是，当离开正在编辑的带有格式的文本段落后，Typora 会自动隐藏 Markdown 留下的标记，实现所见即所得。官方称这为 Hydrid View。</p>
+<ul>
+<li><h4 id="大纲-文件侧边栏"><a href="#大纲-文件侧边栏" class="headerlink" title="大纲 / 文件侧边栏"></a>大纲 / 文件侧边栏</h4></li>
+</ul>
+<p>Typora 会根据你的 Markdown 标记的各级标题呈现大纲。</p>
+<ul>
+<li><h4 id="空格和换行"><a href="#空格和换行" class="headerlink" title="空格和换行"></a>空格和换行</h4><ul>
+<li><p>空格</p>
+<p>输入连续空格后会在编辑视图保留，但打印或导出会省略成一个。</p>
+<p>可以通过 \ 转义符或者使用 &amp;nbsp 保持连续空格</p>
+</li>
+<li><p>软换行</p>
+<p>在 Markdown 语法中，换行 ( line break ) 同换段不同。同时换行分为软换行和硬换行。在 Typora 中可以通过 <strong>Shift+Enter</strong> 完成软换行。但软换行仅编辑界面可见，导出时会被省略。</p>
+</li>
+<li><p>硬换行</p>
+<p>可以通过 <strong>空格 + 空格 + Shift + Enter</strong> 完成一次硬换行，这也是被大多 Markdown 编辑器原生支持的。硬换行在被导出时会被保留，且不会存在换段的段后距。</p>
+</li>
+<li><p>换段</p>
+<p>通过 <strong>Enter</strong> 进行换段。Typora 自动完成两次 <strong>Shift + Enter</strong> 的软换行从而换段。这意味着在 Markdown 语法下换段是在段和段之间加入空行实现的。</p>
+</li>
+<li><p>Windows 风格 ( CR+LF ) 和 Unix 风格 ( CR ) 的换行符</p>
+<p>CR 表示回车 <strong>\r</strong> ，即回到一行的开头，而 LF 表示换行 <strong>\n</strong>，即另起一行</p>
+<p>所以 Windows 风格的换行符本质是 <strong>⌈回车 + 换行⌋</strong> ，而 Unix 风格的换行符是 <strong>⌈换行⌋</strong>。</p>
+</li>
+</ul>
+</li>
+<li><h4 id="emoji-表情"><a href="#emoji-表情" class="headerlink" title="emoji 表情"></a>emoji 表情</h4><ul>
+<li>输入法联想</li>
+<li>复制</li>
+<li>在 Typora 中，可以用 <strong>:emoji:</strong> 的形式打出emoji，会给出图形提示。</li>
+</ul>
+</li>
+</ul>
+<h2 id="一个学术文档编辑器"><a href="#一个学术文档编辑器" class="headerlink" title="一个学术文档编辑器"></a>一个学术文档编辑器</h2><h3 id="LaTeX"><a href="#LaTeX" class="headerlink" title="LaTeX"></a>LaTeX</h3><blockquote>
+<p>LaTeX 是一种基于 TeX 的排版系统，由于它易于快速生成复杂表格和数学公式，非常适用于生成高印刷质量的科技和数学类文档。</p>
+</blockquote>
+<p>​    Typora 原生支持 LaTeX 的语法，有两种方式输入 LaTeX 风格的公式</p>
+<ol>
+<li>行内公式 ( inline )： 用 <strong>$….$</strong> 括起公式，公式会出现在行内。如 $1+1=2$</li>
+<li>块间公式 ( display )： 用 <strong>$$….$$</strong> 括起公式 ( 注意 <strong>$$</strong> 后需要换行)，公式默认显示在行中间。如$$1+1=2$$</li>
+</ol>
+<p>​    <a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/happyday_d/article/details/83715440" >学习 LaTeX 语法。<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h3><p>​    代码插入部分也分行内和块间两种</p>
+<ol>
+<li><p>行内代码用 <strong>`…`</strong> 或 <strong>``….``</strong> 括起代码，代码会以主题中设置的样式出现在行内，但不会实现代码高亮。如 <code>print(&quot;Hello World!&quot;)</code></p>
+</li>
+<li><p>代码块，输入<strong>```</strong> 后输入语言名，换行开始写代码，Typora 会自动实现代码高亮。Typora 原生支持大多编程语言代码块的语法高亮。也可先写代码在选择语言。如</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">foo</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> firstName = <span class="string">&quot;田所&quot;</span></span><br><span class="line">    <span class="keyword">var</span> lastName = <span class="string">&quot;浩二&quot;</span></span><br><span class="line">    <span class="keyword">var</span> age = <span class="number">24</span></span><br><span class="line">    println(<span class="string">&quot;<span class="variable">$firstName</span> <span class="variable">$lastName</span>, 今年<span class="variable">$age</span> 岁，事学生&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>​    在 Typora 中，只需在行内 <code>右键-插入-表格</code>，输入行列就会自动生成一张空表格。</p>
+<h3 id="链接引用与脚注"><a href="#链接引用与脚注" class="headerlink" title="链接引用与脚注"></a>链接引用与脚注</h3><p>​    链接引用类似论文末尾的 <strong>⌈参考文献⌋</strong> 的写法，可以通过 <code>[]:</code> 语法加上链接引用。如 [本文参考]:<a class="link"   target="_blank" rel="noopener" href="https://sspai.com/post/54912" >https://sspai.com/post/54912<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h3><p>​    快速打开。通过<code>文件 - 快速打开...</code> 或 <code>Ctrl + P</code> 快速打开最近的文档。</p>
+<p>​    保存。Typora 支持自动保存，但也有 <strong>⌈保存⌋</strong> <strong>⌈另存为⌋</strong> <strong>⌈保存全部打开的文件…⌋</strong> 之类功能。</p>
+<p>​    导入。Typora 支持导入多种格式 <code>.docx, .latex, .tex, .ltx, .rst, .rest, .org, .wiki, .dokuwiki, .textile, .opml, .epub</code></p>
+<p>导出。Typora 原生支持导出为 PDF， HTML 等格式。可安装 Pandoc 插件以支持导出更多。</p>
+<h2 id="一个伪装成文本编辑器的浏览器"><a href="#一个伪装成文本编辑器的浏览器" class="headerlink" title="一个伪装成文本编辑器的浏览器"></a>一个伪装成文本编辑器的浏览器</h2><h3 id="伪装成文本编辑器的浏览器？"><a href="#伪装成文本编辑器的浏览器？" class="headerlink" title="伪装成文本编辑器的浏览器？"></a>伪装成文本编辑器的浏览器？</h3><p>​    是。譬如可以按 <code>F12</code> 打开浏览器的开发者选项。</p>
+<h3 id="HTML-标签"><a href="#HTML-标签" class="headerlink" title="HTML 标签"></a>HTML 标签</h3><p>​    Typora 支持大量常用的 HTML 标签。会 HTML 的话可以写出精美的文档。</p>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><p>​    为了页面美观可以加上 CSS。</p>
+<p>​    Typora 的主题本质上也是 CSS 文件。</p>
+<h3 id="YAML-font-matter"><a href="#YAML-font-matter" class="headerlink" title="YAML font-matter"></a>YAML font-matter</h3><p>​    Typora 支持在文档头部加上基于 YAML 的 font-matter 信息。这一特性适用于把 Markdown 文档分类归档上传到用 Hexo 框架搭建的博客中。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2>
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：Typora 完全使用手册</li>
+        <li>Post author：Zero-PointEnergy</li>
+        <li>Create time：2021-12-03 18:08:15</li>
+        <li>
+            Post link：https://www.zero-pointenergy.net/archives/65090/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/archives/45585/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">网站优化（一）：请求 Google 收录个人网站</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/archives/60479/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">搭建记录</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>
+              -
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Zero-PointEnergy</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-Typora%EF%BC%9F"><span class="nav-text">什么是 Typora？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA-Markdown-%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8"><span class="nav-text">一个 Markdown 文本编辑器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E-Markdown"><span class="nav-text">关于 Markdown</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E5%BE%97%E8%88%92%E6%9C%8D"><span class="nav-text">写得舒服</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%99%BA%E8%83%BD%E6%A0%87%E7%82%B9-3"><span class="nav-text">智能标点^3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5"><span class="nav-text">图片插入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%93%E5%AD%97%E6%9C%BA%E6%A8%A1%E5%BC%8F%E5%92%8C%E4%B8%93%E6%B3%A8%E6%A8%A1%E5%BC%8F"><span class="nav-text">打字机模式和专注模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E6%97%B6%E9%A2%84%E8%A7%88"><span class="nav-text">实时预览</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%A7%E7%BA%B2-%E6%96%87%E4%BB%B6%E4%BE%A7%E8%BE%B9%E6%A0%8F"><span class="nav-text">大纲 &#x2F; 文件侧边栏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A9%BA%E6%A0%BC%E5%92%8C%E6%8D%A2%E8%A1%8C"><span class="nav-text">空格和换行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emoji-%E8%A1%A8%E6%83%85"><span class="nav-text">emoji 表情</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E5%AD%A6%E6%9C%AF%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E5%99%A8"><span class="nav-text">一个学术文档编辑器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LaTeX"><span class="nav-text">LaTeX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE"><span class="nav-text">代码高亮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC"><span class="nav-text">表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%BE%E6%8E%A5%E5%BC%95%E7%94%A8%E4%B8%8E%E8%84%9A%E6%B3%A8"><span class="nav-text">链接引用与脚注</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="nav-text">文件系统</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E4%BC%AA%E8%A3%85%E6%88%90%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="nav-text">一个伪装成文本编辑器的浏览器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%AA%E8%A3%85%E6%88%90%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E6%B5%8F%E8%A7%88%E5%99%A8%EF%BC%9F"><span class="nav-text">伪装成文本编辑器的浏览器？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-%E6%A0%87%E7%AD%BE"><span class="nav-text">HTML 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS"><span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#YAML-font-matter"><span class="nav-text">YAML font-matter</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text">参考</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
